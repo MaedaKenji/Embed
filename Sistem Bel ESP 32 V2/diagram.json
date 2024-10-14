@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "author": "Agus Fuad",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 67.2, "left": 1608.04, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg7",
+      "top": 91.38,
+      "left": 1905.88,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio1",
+      "top": -210.18,
+      "left": -600,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "0" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio2",
+      "top": -171.78,
+      "left": -600,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "1" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio3",
+      "top": -133.38,
+      "left": -600,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "2" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio4",
+      "top": -94.98,
+      "left": -600,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "3" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio5",
+      "top": -210.18,
+      "left": -475.2,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "4" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio6",
+      "top": -171.78,
+      "left": -475.2,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "5" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio7",
+      "top": -133.38,
+      "left": -475.2,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "6" }
+    },
+    {
+      "type": "board-tt-block-bidirectional-io",
+      "id": "ttio8",
+      "top": -94.98,
+      "left": -475.2,
+      "attrs": { "verilogRole": "bidirectional", "verilogBit": "7" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -249.38,
+      "left": -564.25,
+      "attrs": { "text": "Bidirectional I/O pins" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg9",
+      "top": 81.78,
+      "left": 1781.08,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg10",
+      "top": 91.38,
+      "left": 1982.68,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:15", "sevseg9:E", "green", [ "v0", "h76.8" ] ],
+    [ "esp:2", "sevseg9:D", "green", [ "h0" ] ],
+    [ "sevseg9:C", "esp:0", "green", [ "v0" ] ],
+    [ "sevseg9:B", "esp:4", "green", [ "v-18.36", "h9.6", "v144" ] ],
+    [ "sevseg9:A", "esp:16", "green", [ "v-27.96", "h38.4", "v144" ] ],
+    [ "sevseg9:F", "esp:17", "green", [ "v-27.96", "h-28.8", "v134.4" ] ],
+    [ "sevseg9:G", "esp:5", "green", [ "v-18.36", "h-38.4", "v115.2" ] ],
+    [ "esp:18", "sevseg9:COM.1", "green", [ "h96" ] ],
+    [ "sevseg9:E", "sevseg7:E", "green", [ "v28.8", "h124.8" ] ],
+    [ "sevseg7:E", "sevseg10:E", "green", [ "v19.2", "h76.8" ] ],
+    [ "sevseg9:D", "sevseg7:D", "green", [ "v28.8", "h124.8" ] ],
+    [ "sevseg7:D", "sevseg10:D", "green", [ "v19.2", "h76.8" ] ],
+    [ "sevseg9:C", "sevseg7:C", "green", [ "v28.8", "h124.8", "v-19.2" ] ],
+    [ "sevseg7:C", "sevseg10:C", "green", [ "v19.2", "h76.8" ] ],
+    [ "sevseg9:G", "sevseg7:G", "green", [ "v-27.96", "h124.8" ] ],
+    [ "sevseg7:G", "sevseg10:G", "green", [ "v-37.56", "h76.8" ] ],
+    [ "sevseg9:F", "sevseg7:F", "green", [ "v-27.96", "h124.8" ] ],
+    [ "sevseg7:F", "sevseg10:F", "green", [ "v-37.56", "h76.8" ] ],
+    [ "sevseg9:A", "sevseg7:A", "green", [ "v-27.96", "h124.8" ] ],
+    [ "sevseg7:A", "sevseg10:A", "green", [ "v-37.56", "h76.8" ] ],
+    [ "sevseg9:B", "sevseg7:B", "green", [ "v-27.96", "h124.8" ] ],
+    [ "sevseg7:B", "sevseg10:B", "green", [ "v-37.56", "h76.8" ] ],
+    [ "esp:21", "sevseg7:COM.1", "green", [ "h28.8", "v105.6", "h192", "v-86.4" ] ],
+    [ "esp:22", "sevseg10:COM.1", "green", [ "h28.8", "v144", "h278.4" ] ]
+  ],
+  "dependencies": {}
+}

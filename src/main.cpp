@@ -482,13 +482,13 @@ void loop()
             startTime = millis();
         }
 
-        if (kondisi == 0 && tombolSudahDitekan)
+        if (kondisi == 0)
         {
             if (jumlahPesertaAktif > 0)
             {
                 timer = millis() - startTime;
                 Serial.println("Looping 3 selama " + String(timer) + " detik");
-
+    
                 for (int i = 0; i < 3; i++)
                 {
                     if (pesertaAktif != i)
@@ -501,12 +501,10 @@ void loop()
                         tampilkanAngka(nilai_peserta[i], i);
                         // delay(5000);
                     }
-                    
 
-                    if (timer <= 3000 && tombolSudahDitekan)
-                    {
-                    }
-                    else
+                    if (pesertaStates.isActive(pesertaAktif))
+
+                    if (timer >= 3000)
                     {
                         kondisi = -1;
                         standby = false;
@@ -589,4 +587,3 @@ void loop()
         // Delay kecil untuk debouncing
         delay(50);
     }
-    

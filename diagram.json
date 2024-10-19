@@ -3,12 +3,12 @@
   "author": "Agus Fuad",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 67.2, "left": 1608.04, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -192, "left": -33.56, "attrs": {} },
     {
       "type": "wokwi-7segment",
       "id": "sevseg7",
-      "top": 91.38,
-      "left": 1925.08,
+      "top": -167.82,
+      "left": 283.48,
       "attrs": { "common": "cathode" }
     },
     {
@@ -77,57 +77,57 @@
     {
       "type": "wokwi-7segment",
       "id": "sevseg9",
-      "top": 91.38,
-      "left": 1838.68,
+      "top": -167.82,
+      "left": 197.08,
       "attrs": { "common": "cathode" }
     },
     {
       "type": "wokwi-7segment",
       "id": "sevseg10",
-      "top": 91.38,
-      "left": 2001.88,
+      "top": -167.82,
+      "left": 360.28,
       "attrs": { "common": "cathode" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn1",
-      "top": 63.8,
-      "left": 1363.2,
+      "top": -195.4,
+      "left": -278.4,
       "attrs": { "color": "green", "bounce": "0", "text": "R" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn2",
-      "top": 131,
-      "left": 1363.2,
+      "top": -128.2,
+      "left": -278.4,
       "attrs": { "color": "green", "bounce": "0" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn3",
-      "top": 188.6,
-      "left": 1363.2,
+      "top": -70.6,
+      "left": -278.4,
       "attrs": { "color": "green", "bounce": "0" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn4",
-      "top": 255.8,
-      "left": 1363.2,
+      "top": -3.4,
+      "left": -278.4,
       "attrs": { "color": "green", "bounce": "1" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn5",
-      "top": 313.4,
-      "left": 1363.2,
+      "top": 54.2,
+      "left": -278.4,
       "attrs": { "color": "green", "bounce": "1" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn6",
-      "top": 371,
-      "left": 1363.2,
+      "top": 111.8,
+      "left": -278.4,
       "attrs": { "color": "green" }
     }
   ],
@@ -145,7 +145,7 @@
     [ "sevseg7:E", "sevseg10:E", "green", [ "v19.2", "h76.8" ] ],
     [ "sevseg9:D", "sevseg7:D", "green", [ "v28.8", "h124.8" ] ],
     [ "sevseg7:D", "sevseg10:D", "green", [ "v19.2", "h76.8" ] ],
-    [ "sevseg9:C", "sevseg7:C", "green", [ "v28.8", "h124.8", "v-19.2" ] ],
+    [ "sevseg9:C", "sevseg7:C", "green", [ "v28.8", "h86.4", "v-28.8" ] ],
     [ "sevseg7:C", "sevseg10:C", "green", [ "v19.2", "h76.8" ] ],
     [ "sevseg9:G", "sevseg7:G", "green", [ "v-37.56", "h86.4" ] ],
     [ "sevseg7:G", "sevseg10:G", "green", [ "v-37.56", "h76.8" ] ],
@@ -155,7 +155,7 @@
     [ "sevseg7:A", "sevseg10:A", "green", [ "v-37.56", "h76.8" ] ],
     [ "sevseg9:B", "sevseg7:B", "green", [ "v-37.56", "h86.4" ] ],
     [ "sevseg7:B", "sevseg10:B", "green", [ "v-37.56", "h76.8" ] ],
-    [ "esp:21", "sevseg7:COM.1", "green", [ "h28.8", "v105.6", "h192", "v-86.4" ] ],
+    [ "esp:21", "sevseg7:COM.1", "green", [ "h28.8", "v105.6", "h211.2", "v-86.4" ] ],
     [ "esp:22", "sevseg10:COM.1", "green", [ "h28.8", "v144", "h278.4" ] ],
     [ "esp:GND.2", "btn1:1.r", "black", [ "v0", "h19.2", "v-57.6", "h-278.4", "v38.4" ] ],
     [ "btn1:1.r", "btn2:1.r", "green", [ "v0", "h19.4", "v67.2" ] ],
@@ -163,13 +163,13 @@
     [ "btn4:1.r", "btn3:1.r", "green", [ "v0", "h19.4", "v-67.2" ] ],
     [ "btn5:1.r", "btn4:1.r", "green", [ "v0", "h19.4", "v-57.6" ] ],
     [ "btn6:1.r", "btn5:1.r", "green", [ "v0", "h19.4", "v-57.6" ] ],
-    [ "btn1:2.r", "esp:34", "green", [ "h163.4", "v38.6" ] ],
-    [ "esp:35", "btn2:2.r", "green", [ "h-105.45", "v19.2" ] ],
     [ "esp:32", "btn3:2.r", "green", [ "h-95.85", "v67.2" ] ],
     [ "esp:33", "btn4:2.r", "green", [ "h-76.65", "v124.8", "h-105.6" ] ],
     [ "esp:25", "btn5:2.r", "green", [ "v0", "h-67.05", "v172.8" ] ],
     [ "esp:26", "btn6:2.r", "green", [ "h-57.45", "v220.8" ] ],
-    [ "esp:17", "sevseg9:F", "green", [ "h201.6", "v-134.4", "h-57.6" ] ]
+    [ "esp:17", "sevseg9:F", "green", [ "h201.6", "v-134.4", "h-57.6" ] ],
+    [ "btn2:2.r", "esp:14", "green", [ "h67.4", "v38.6" ] ],
+    [ "btn1:2.r", "esp:27", "green", [ "h77", "v9.8" ] ]
   ],
   "dependencies": {}
 }
